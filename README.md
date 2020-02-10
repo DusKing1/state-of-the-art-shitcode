@@ -1,24 +1,12 @@
-# State-of-the-Art Shitcode Principles
+# State-of-the-Art ShitMountain Principles
 
-[![State-of-the-art Shitcode](https://img.shields.io/static/v1?label=State-of-the-art&message=Shitcode&color=7B5804)](https://github.com/trekhleb/state-of-the-art-shitcode)
+[![State-of-the-art ShitMountain]]
 
-This a list of state-of-the-art shitcode principles your project should follow to call it a proper shitcode.
-
-## Get Your Badge
-
-If your repository follows the state-of-the-art shitcode principles you may use the following "state-of-the-art shitcode" badge:
-
-[![State-of-the-art Shitcode](https://img.shields.io/static/v1?label=State-of-the-art&message=Shitcode&color=7B5804)](https://github.com/trekhleb/state-of-the-art-shitcode)
-
-Markdown source-code for the badge:
-
-```
-[![State-of-the-art Shitcode](https://img.shields.io/static/v1?label=State-of-the-art&message=Shitcode&color=7B5804)](https://github.com/trekhleb/state-of-the-art-shitcode)
-```
+This a list of state-of-the-art shitmountain principles your project should follow to call it as a proper shitmountain.
 
 ## The Principles
 
-### 💩 Name variables in a way as if your code was already obfuscated
+### 💩 Name variables in as less words as possible
 
 Less keystrokes, more time for you.
 
@@ -36,7 +24,7 @@ let age = 42;
 
 ### 💩 Mix variable/functions naming style
 
-Celebrate the difference.
+Celebrate the multi-naming.
 
 _Good 👍🏻_
 
@@ -50,6 +38,37 @@ _Bad 👎🏻_
 ```javascript
 let windowWidth = 640;
 let windowHeight = 480;
+```
+### 💩 Mix Chinese Pinyin/English naming style
+
+Who never forget a few words？
+
+_Good 👍🏻_
+
+```javascript
+const uint_16 wendouFreeze;
+```
+
+_Bad 👎🏻_
+
+```javascript
+const uint_16 windowFreeze;
+```
+
+### 💩 Never use Camel-Case
+
+Because we do not need camel.
+
+_Good 👍🏻_
+
+```javascript
+const displaythenumberifuserpressthatstupidbutton = 700;
+```
+
+_Bad 👎🏻_
+
+```javascript
+const displayUserNumber = 700;
 ```
 
 ### 💩 Never write comments
@@ -67,19 +86,23 @@ _Bad 👎🏻_
 More often comments should contain some 'why' and not some 'what'. If the 'what' is not clear in the code, the code is probably too messy.
 
 ```javascript
-// The number of 700ms has been calculated empirically based on UX A/B test results.
-// @see: <link to experiment or to related JIRA task or to something that explains number 700 in details>
-const callbackDebounceRate = 700;
+// Divide rate change by dT to get differential (ie dr/dt).
+// dT is fixed and calculated from the target PID loop time
+// This is done to avoid DTerm spikes that occur with dynamically
+// calculated deltaT whenever another task causes the PID
+// loop execution to be delayed.
+const float delta = 
+- (gyroRateDterm[axis] - previousGyroRateDterm[axis]) * pidFrequency;
 ```
 
 ### 💩 Always write comments in your native language
 
-If you violated the "No comments" principle then at least try to write comments in a language that is different from the language you use to write the code. If your native language is English you may violate this principle.
+I'm at the 8-th level of Davelish (Crazy Dave). If your native language is English you may violate this principle.
 
 _Good 👍🏻_
 
 ```javascript
-// Закриваємо модальне віконечко при виникненні помилки.
+// Waibi waibi, waibi bapo.
 toggleModal(false);
 ```
 
@@ -92,7 +115,7 @@ toggleModal(false);
 
 ### 💩 Try to mix formatting style as much as possible
 
-Celebrate the difference.
+Celebrate the multi-formatting.
 
 _Good 👍🏻_
 
@@ -110,6 +133,8 @@ let dressings = ['ketchup', 'mayonnaise'];
 
 ### 💩 Put as much code as possible into one line
 
+Just like reading a real book.
+
 _Good 👍🏻_
 
 ```javascript
@@ -119,7 +144,7 @@ document.location.search.replace(/(^\?)/,'').split('&').reduce(function(o,n){n=n
 _Bad 👎🏻_
 
 ```javascript
-document.location.search
+documentlocation.search
   .replace(/(^\?)/, '')
   .split('&')
   .reduce((searchParams, keyValuePair) => {
@@ -141,7 +166,7 @@ _Good 👍🏻_
 try {
   // Something unpredictable.
 } catch (error) {
-  // tss... 🤫
+  // tssss... 🤫
 }
 ```
 
@@ -207,34 +232,6 @@ function sum(a, b) {
 }
 ```
 
-### 💩 Don't specify types and/or don't do type checks if language allows you to do so.
-
-_Good 👍🏻_
-
-```javascript
-function sum(a, b) {
-  return a + b;
-}
-
-// Having untyped fun here.
-const guessWhat = sum([], {}); // -> "[object Object]"
-const guessWhatAgain = sum({}, []); // -> 0
-```
-
-_Bad 👎🏻_
-
-```javascript
-function sum(a: number, b: number): ?number {
-  // Covering the case when we don't do transpilation and/or Flow type checks in JS.
-  if (typeof a !== 'number' && typeof b !== 'number') {
-    return undefined;
-  }
-  return a + b;
-}
-
-// This one should fail during the transpilation/compilation.
-const guessWhat = sum([], {}); // -> undefined
-```
 
 ### 💩 You need to have an unreachable piece of code
 
@@ -265,9 +262,9 @@ function square(num) {
 }
 ```
 
-### 💩 Triangle principle
+### 💩 Use as many nested structures as possible
 
-Be like a bird - nest, nest, nest.
+Triangle principle. Be like a bird - nest, nest, nest.
 
 _Good 👍🏻_
 
@@ -308,7 +305,7 @@ async function someFunction() {
 }
 ```
 
-### 💩 Mess with indentations
+### 💩 Change indentation for each line
 
 Avoid indentations since they make complex code take up more space in the editor. If you're not filling like avoiding them then just mess with them.
 
@@ -371,17 +368,29 @@ Don't divide a program logic into readable pieces. What if your IDE's search bra
 - 1000 lines of a function body is OK.
 - Dealing with many services (3rd party and internal, also, there are some helpers, database hand-written ORM and jQuery slider) in one `service.js`? It's OK.
 
+### 💩 Use a complex cross-platform cross-compilation toolchain.
+
+Don't forget to cross fingers! Both hands.
+
 ### 💩 Avoid covering your code with tests
 
 This is a duplicate and unnecessary amount of work.
 
-### 💩 As hard as you can try to avoid code linters
+### 💩 As hard as you can try to avoid version control
 
-Write code as you want, especially if there is more than one developer in a team. This is a "freedom" principle.
+Release new versions as you want, especially if there is more than one developer in a team. This is a "freedom" principle.
+
+### 💩 As many as you can try to release all development versions to ordinary people
+
+Especially if there are many users. Mess their data and burn their devices.
 
 ### 💩 Start your project without a README file.
 
 And keep it that way for the time being.
+
+### 💩 Never write any doc/wiki.
+
+Obviously docs/wikis are for shitcode-cleaner, don't give them any chance.
 
 ### 💩 You need to have unnecessary code
 
