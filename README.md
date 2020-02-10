@@ -380,7 +380,7 @@ This is a duplicate and unnecessary amount of work.
 
 Release new versions as you want, especially if there is more than one developer in a team. This is a "freedom" principle.
 
-### 💩 As many as you can try to release all development versions to ordinary people
+### 💩 As many as you can try to release development versions to ordinary people
 
 Especially if there are many users. Mess their data and burn their devices.
 
